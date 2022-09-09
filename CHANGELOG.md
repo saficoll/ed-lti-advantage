@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 ### Fixed
-Update change log with composer info (PR #5)
+Update readme with composer info, which is a required step (PR #5)
 
 ## [1.0] - 2022-07-06
 - First major release
