@@ -41,13 +41,25 @@ If the Multisite Privacy plugin or the More Privacy Option plugins are installed
 
 1. Copy the ed-lti folder to the plugins folder.
 **Note:** for instructions on how to install a plugin manually, please visit [WordPress for dummies](https://www.dummies.com/web-design-development/wordpress/templates-themes-plugins/how-to-install-wordpress-plugins-manually/)
-2. From **Network Admin > Plugins** select the plugin and click **Network Activate**.
-3. Go to **Network Admin > Settings > LTI Platforms** and enter a Name, Issuer (URL of connecting VLE, e.g. http://moodle.test) Client ID, Deployment ID, Authentication Request URL, Access Token URL, Public Keyset URL. These properties should be provided by the VLE. For example, on moodle, once you have created a tool, click on the 'View configuration details' icon to work out what values to enter for the platform.
+2. Either locally (before you push the plugin) or on the server, you will need to run composer to install all dependency libraries for this plugin. Composer is a package manager for PHP - more info can be found [here](https://getcomposer.org/)
+
+In the terminal run:
+
+```
+cd <plugin-root-directory>
+```
+```
+composer install
+```
+
+This should create a vendor directory with the imsglobal libraries. 
+3. From **Network Admin > Plugins** select the plugin and click **Network Activate**.
+4. Go to **Network Admin > Settings > LTI Platforms** and enter a Name, Issuer (URL of connecting VLE, e.g. http://moodle.test) Client ID, Deployment ID, Authentication Request URL, Access Token URL, Public Keyset URL. These properties should be provided by the VLE. For example, on moodle, once you have created a tool, click on the 'View configuration details' icon to work out what values to enter for the platform.
    ![Alt text](readme-images/moodle-info.png?raw=true "moodle configuration details")
    ![Alt text](readme-images/moodle-popup.png?raw=true "moodle configuration details popup")
-4. Check **Enabled** to activate your platform.
-5. Go to **Network Admin > Settings > LTI Settings** and enter the URL of the blog that you would like to use as the template for new blogs.  This value defaults to the root blog if left empty. 
-6. If one of the privacy plugins is installed, you have the option of making blogs private on site creation. You can also enter the URL for a help page that is included in error messages. If this field is left empty, error messages will not include help info.
+5. Check **Enabled** to activate your platform.
+6. Go to **Network Admin > Settings > LTI Settings** and enter the URL of the blog that you would like to use as the template for new blogs.  This value defaults to the root blog if left empty. 
+7. If one of the privacy plugins is installed, you have the option of making blogs private on site creation. You can also enter the URL for a help page that is included in error messages. If this field is left empty, error messages will not include help info.
 
 
 ### VLE Settings
