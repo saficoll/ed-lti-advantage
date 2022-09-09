@@ -41,10 +41,9 @@ If the Multisite Privacy plugin or the More Privacy Option plugins are installed
 
 1. Copy the ed-lti folder to the plugins folder.
 **Note:** for instructions on how to install a plugin manually, please visit [WordPress for dummies](https://www.dummies.com/web-design-development/wordpress/templates-themes-plugins/how-to-install-wordpress-plugins-manually/)
-2. Either locally (before you push the plugin) or on the server, you will need to run composer to install the imsglobal libraries.
-You can do this in the terminal:
+2. Either locally (before you push the plugin) or on the server, you will need to run composer to install all dependency libraries for this plugin. Composer is a package manager for PHP - more info can be found [here](https://getcomposer.org/)
 
-e.g. 
+In the terminal run:
 
 ```
 cd <plugin-root-directory>
