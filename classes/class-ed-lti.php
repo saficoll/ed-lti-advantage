@@ -302,7 +302,7 @@ class Ed_LTI {
 			$resource_link_id
 		);
 
-		$this->render_student_blogs_list_view( $course_id, $resource_link_id );
+		$this->render_student_blogs_list( $course_id, $resource_link_id );
 	}
 
 	/**
@@ -336,7 +336,7 @@ class Ed_LTI {
 	 *
 	 * @return void
 	 */
-	private function render_student_blogs_list_view( string $course_id, string $resource_link_id ): void {
+	private function render_student_blogs_list( string $course_id, string $resource_link_id ): void {
 		$blog_type = 'student';
 
 		$query = "SELECT * FROM {$this->wpdb->base_prefix}blogs_meta "
@@ -372,7 +372,7 @@ class Ed_LTI {
 				$blog_details = get_blog_details( $blog->blog_id );
 				$blog_name    = $blog_details->blogname;
 
-				echo '<li><a href="index.php?lti_staff_view_blog=true&blog_id=' . esc_attr( $blog->blog_id ) . '">' .
+				echo '<li><a href="index.php?lti_staff_view=true&blog_id=' . esc_attr( $blog->blog_id ) . '">' .
 				     esc_html( $blog_name ) . '</a></li>';
 			}
 		}
@@ -392,7 +392,7 @@ class Ed_LTI {
 	 */
 	public function add_staff_to_student_blog(): void {
 		// phpcs:disable
-		if ( isset( $_REQUEST['lti_staff_view_blog'] ) && 'true' === $_REQUEST['lti_staff_view_blog'] ) {
+		if ( isset( $_REQUEST['lti_staff_view'] ) && 'true' === $_REQUEST['lti_staff_view'] ) {
 			// phpcs:enable
 			if ( session_status() === PHP_SESSION_NONE ) {
 				session_start();
