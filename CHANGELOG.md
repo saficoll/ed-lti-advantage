@@ -6,5 +6,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [1.0] - 2022-10-04
+### Fixed
+- Make sure blogs list page does not conflict with ed-lti plugin
+
 ## [1.0] - 2022-07-06
 - First major release
